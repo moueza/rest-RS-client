@@ -1,0 +1,27 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+  <constant name="struts.objectFactory" value="spring" />
+
+
+
+	<!-- http://struts.apache.org/plugins/spring/ -->
+   <include file="struts-default.xml"/>
+
+	<!-- Foo autowired AOP -->
+    <package name="default" extends="struts-default">
+        <action name="foo" class="com.acme.Foo">
+            <result>foo.ftl</result>
+        </action>
+    </package>
+
+    <package name="secure" namespace="/secure" extends="default">
+        <action name="bar" class="bar">
+            <result>bar.ftl</result>
+        </action>
+    </package>
+</struts>
+
