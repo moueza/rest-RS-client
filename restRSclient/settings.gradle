@@ -29,3 +29,7 @@ buildCache {
     }
   }
 }
+
+//https://spacanowski.github.io/java/gradle/microservice/2016/07/17/gradle-var-managment/
+ //moi
+springframeworkVersion = '5.0.2.RELEASE'
