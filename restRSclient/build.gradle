@@ -57,6 +57,43 @@ compile group: 'org.aspectj', name: 'aspectjlib', version: '1.6.2'
    // https://mvnrepository.com/artifact/org.aspectj/aspectjtools
 compile group: 'org.aspectj', name: 'aspectjtools', version: '1.8.9'
    
+   
+   /**= Springcore*/
+   // https://mvnrepository.com/artifact/org.springframework/spring
+compile group: 'org.springframework', name: 'spring', version: '2.5.6'
+
+
+   //TODO Gradle variable
+   // https://mvnrepository.com/artifact/org.springframework/spring-beans
+compile group: 'org.springframework', name: 'spring-beans', version: '4.3.12.RELEASE'
+   
+   /**=Spring framework*/
+   // https://mvnrepository.com/artifact/org.springframework/spring-core
+compile group: 'org.springframework', name: 'spring-core', version: '4.3.13.RELEASE'
+   
+   
+   // https://mvnrepository.com/artifact/org.springframework/spring-test
+testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.13.RELEASE'
+   
+   
+   // https://mvnrepository.com/artifact/org.springframework/spring-web
+compile group: 'org.springframework', name: 'spring-web', version: '4.3.13.RELEASE'
+   
+   
+   // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.12.RELEASE'
+   
+   // https://mvnrepository.com/artifact/org.springframework/spring-aop
+compile group: 'org.springframework', name: 'spring-aop', version: '4.3.13.RELEASE'
+   
+   // https://mvnrepository.com/artifact/org.springframework/spring-tx
+compile group: 'org.springframework', name: 'spring-tx', version: '4.3.12.RELEASE'
+   
+   
+   /**TODO STRUTS 3 !  3.2.8.RELEASE*/
+   // https://mvnrepository.com/artifact/org.springframework/spring-struts
+compile group: 'org.springframework', name: 'spring-struts', version: '2.0.8'
+   
 }
 
 

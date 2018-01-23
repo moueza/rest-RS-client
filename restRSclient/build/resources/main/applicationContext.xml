@@ -5,6 +5,11 @@
 <!-- https://docs.spring.io/spring/docs/2.5.x/reference/aop.html -->
 <!-- <aop:aspectj-autoproxy/> -->
 
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" -->
+<!-- "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> -->
+
+
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -13,7 +18,7 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<!-- default-autowire-candidates="*" default-autowire="byName" -->
 	<context:component-scan base-package="entities,services,dao,presentation" />
-	<context:annotation-config />
+	<context:annotation-config default-autowire="autodetect" />
 
 
 	<!-- <bean id="personVALUED" class="entities.Person" autowire="byName" -->
@@ -25,5 +30,12 @@
 	<!-- https://docs.spring.io/spring/docs/2.5.x/reference/aop.html -->
 	<bean
 		class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />
+
+	<!-- http://struts.apache.org/plugins/spring/ -->
+	<bean id="personManager" class="com.acme.PersonManager" scope="prototype" />
+
+	<!-- <bean id="bar" class="com.my.BarClass" singleton="false"/> -->
+	<bean id="bar" class="com.my.BarClass" scope="prototype" />
+
 </beans>
   
