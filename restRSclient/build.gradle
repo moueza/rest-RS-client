@@ -8,12 +8,17 @@
 
 // Apply the java-library plugin to add support for Java Library
 //apply plugin: 'java-library'
-
+plugins {
+  id 'com.gradle.build-scan' version '1.11'
+}
 
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
-
+buildScan {
+  server = 'https://i6itqnwmj3koousazwce7bxjda-trial.gradle.com'
+  publishAlways()
+}
 project.webAppDirName = 'WebContent'
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -39,7 +44,7 @@ compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servle
    
    // https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api
 compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0'
-    
+   compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1' 
 }
 
 
@@ -52,3 +57,10 @@ eclipse {
         }
     }
 }
+
+   //TODO Dynamic version
+    task wrapper(type: Wrapper) {
+    gradleVersion = '4.4.1'
+}
+
+
