@@ -91,7 +91,8 @@ compile group: 'org.springframework', name: 'spring-tx', version: '${springframe
    
    
    
-   /**TODO STRUTS 3 !  3.2.8.RELEASE*/
+   /**TODO STRUTS 3 !  3.2.8.RELEASE
+   https://www.mkyong.com/struts/struts-spring-integration-example/*/
    // https://mvnrepository.com/artifact/org.springframework/spring-struts
 compile group: 'org.springframework', name: 'spring-struts', version: '2.0.8'
    
