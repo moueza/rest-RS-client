@@ -8,6 +8,9 @@
 
 // Apply the java-library plugin to add support for Java Library
 //apply plugin: 'java-library'
+
+//String 
+
 plugins {
   id 'com.gradle.build-scan' version '1.11'
 }
@@ -20,6 +23,9 @@ buildScan {
   publishAlways()
 }
 project.webAppDirName = 'WebContent'
+project.ext{
+springframeworkVersion2 = '5.0.2.RELEASE'
+}
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -65,29 +71,29 @@ compile group: 'org.springframework', name: 'spring', version: '2.5.6'
 
    //TODO Gradle variable
    // https://mvnrepository.com/artifact/org.springframework/spring-beans
-compile group: 'org.springframework', name: 'spring-beans', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-beans', version:  project.ext.springframeworkVersion2
    
    /**=Spring framework*/
    // https://mvnrepository.com/artifact/org.springframework/spring-core
-compile group: 'org.springframework', name: 'spring-core', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-core', version: project.ext.springframeworkVersion2
    
    
    // https://mvnrepository.com/artifact/org.springframework/spring-test
-testCompile group: 'org.springframework', name: 'spring-test', version: '${springframeworkVersion}'
+testCompile group: 'org.springframework', name: 'spring-test', version: project.ext.springframeworkVersion2
    
    
    // https://mvnrepository.com/artifact/org.springframework/spring-web
-compile group: 'org.springframework', name: 'spring-web', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-web', version: project.ext.springframeworkVersion2
    
    
    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
-compile group: 'org.springframework', name: 'spring-jdbc', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-jdbc', version: project.ext.springframeworkVersion2
    
    // https://mvnrepository.com/artifact/org.springframework/spring-aop
-compile group: 'org.springframework', name: 'spring-aop', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-aop', version: project.ext.springframeworkVersion2
    
    // https://mvnrepository.com/artifact/org.springframework/spring-tx
-compile group: 'org.springframework', name: 'spring-tx', version: '${springframeworkVersion}'
+compile group: 'org.springframework', name: 'spring-tx', version: project.ext.springframeworkVersion2
    
    
    
@@ -96,7 +102,15 @@ compile group: 'org.springframework', name: 'spring-tx', version: '${springframe
    // https://mvnrepository.com/artifact/org.springframework/spring-struts
 compile group: 'org.springframework', name: 'spring-struts', version: '2.0.8'
    
-}
+   /**for ListCustomerAction HttpServletRequest*/
+// https://mvnrepository.com/artifact/javax.servlet/servlet-api
+// deprecated provided group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+  
+  
+  // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+//provided group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    }
 
 
 
@@ -119,6 +133,6 @@ eclipse {
 ext{
     //dependencies
    
-  //  springframeworkVersion = '5.0.2.RELEASE' 
+  //  springframeworkVersion2 = '5.0.2.RELEASE' 
   //https://spacanowski.github.io/java/gradle/microservice/2016/07/17/gradle-var-managment/ cf settings
 }

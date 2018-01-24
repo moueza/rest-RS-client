@@ -37,5 +37,12 @@
 	<!-- <bean id="bar" class="com.my.BarClass" singleton="false"/> -->
 	<bean id="bar" class="com.my.BarClass" scope="prototype" />
 
+
+
+
+<!-- https://www.mkyong.com/struts/struts-spring-integration-example/ -->
+<bean id="customerBo" class="com.mkyong.customer.bo.impl.CustomerBoImpl" >
+	<property name="customerDao" ref="customerDao" />
+</bean>
 </beans>
   
