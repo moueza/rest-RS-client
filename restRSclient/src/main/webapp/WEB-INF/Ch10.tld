@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<!-- jakarta -->
+<!-- https://docs.oracle.com/cd/E13222_01/wls/docs60/taglib/tld.html -->
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.2</jspversion>
+
+	<shortname>StrutsExample</shortname>
+
+	<info>
+		Implementation de l exemple Struts
+	</info>
+
+	<tag>
+		<name>type</name>
+		<tagclass>org.eclipsebook.ch10.Ch10_02</tagclass>
+		<bodycontent>empty</bodycontent>
+	</tag>
+
+	<tag>
+		<name>items</name>
+		<tagclass>org.eclipsebook.ch10.Ch10_03</tagclass>
+		<bodycontent>JSP</bodycontent>
+	</tag>
+
+</taglib>

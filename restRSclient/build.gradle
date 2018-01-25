@@ -110,6 +110,16 @@ compile group: 'org.springframework', name: 'spring-struts', version: '2.0.8'
   // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
 //provided group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+   
+   
+   // https://mvnrepository.com/artifact/org.apache.struts/struts2-core
+compile group: 'org.apache.struts', name: 'struts2-core', version: '2.5.14.1'
+   
+   
+   // https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api
+//provided group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.0'
+compile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.0'
+
     }
 
 
@@ -135,4 +145,17 @@ ext{
    
   //  springframeworkVersion2 = '5.0.2.RELEASE' 
   //https://spacanowski.github.io/java/gradle/microservice/2016/07/17/gradle-var-managment/ cf settings
+}
+
+
+task(hello) {
+    doLast {
+        println "hello"
+    }
+}
+
+//https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:task_outcomes
+task(copy, type: Copy) {
+    from(file('srcDir'))
+    into(buildDir)
 }
