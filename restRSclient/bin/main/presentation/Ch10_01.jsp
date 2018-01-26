@@ -23,9 +23,10 @@
 <!-- %@taglib uri="/Ch10" prefix="Ch10"%>  -->
 
 
-<%@ taglib prefix="s" uri="/struts-tags"%>
+<%-- <%@ taglib prefix="s" uri="/struts-tags"%> --%>
 
-<%@ taglib uri="/WEB-INF/Ch10.tld" prefix="Ch10"%>
+<!-- <%@ taglib uri="/WEB-INF/Ch10.tld" prefix="Ch10" --%>
+<%@ taglib uri="/main/webapp/WEB-INF/Ch10.tld" prefix="Ch10"%>
 
 <!--  TODO JSTL-->
 <!-- http://www.oreilly.com/catalogue/2841772640.html -->
@@ -41,6 +42,10 @@
 	<Ch10:items />
 
 	<html:form action="Ch10_04.do">
+	   <span style="color:red">
+        <html:errors/>
+        <!-- https://javabeat.net/struts-html-errors-tag-htmlerrors/ -->
+        </span>
 		<TABLE>
 			<TR>
 				<TD align="left" valign="top"><bean:message key="items" /> <BR>
@@ -58,7 +63,7 @@
 					</html:select></TD>
 			</TR>
 			<tr>
-				<TD align="left"><br> <bean:message key=email /> <html:text
+				<TD align="left"><br> <bean:message key="email" /> <html:text
 						property="email" /></TD>
 			</tr>
 		</TABLE>
