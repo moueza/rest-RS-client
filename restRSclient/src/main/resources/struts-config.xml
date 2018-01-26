@@ -34,4 +34,6 @@
 			value="/WEB-INF/classes/applicationContext.xml" />
 	</plug-in>
 
+
+
 </struts-config>
